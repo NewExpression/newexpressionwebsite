@@ -1,0 +1,129 @@
+<div class="section-1">
+	<form action="" class="form-horizontal">
+		<div class="step-1 step hideme" data-step="1">
+			<div class="control-group">
+				<div class="control-label">
+					<label >Name:</label>
+				</div>
+				<div class="controls">
+					<input type="text" ng-model="quote.name" name="name" placeholder="Please tell use your first name" required>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="control-label">
+					<label >Your Email: </label>
+				</div>
+				<div class="controls">
+					<input type="email" name="email" ng-model="quote.email" placeholder="nam@mail.com">
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<input type="button" class="btn" value="Going To Next Form" ng-click="nextStep($event)"/>
+				</div>
+			</div>
+		</div>
+		<div class="step-2 step hideme" data-step="2">
+			<div class="control-group">
+				<div class="control-label">
+					<label>Project Type</label>
+				</div>
+				<div class="controls">
+					<select name="type" ng-model="quote.type" ng-required ng-options="value for value in projectTypes">
+						<option value="">--Select Project Type</option>
+					</select>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="control-label">
+					<label>How many month your plan: </label>
+				</div>
+				<div class="controls">
+					<select name="month" ng-model="quote.month" ng-required  ng-options="month for month in monthOpitons">
+						<option value="">--Select Your Month Plan</option>
+					</select>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="control-label">
+					<label>Description: </label>
+				</div>
+				<div class="controls">
+					<textarea name="description" ng-model="quote.description" id="" cols="30" rows="10" placeholder="Please tell us more details about your project"></textarea>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<input type="button" class="btn" value="Preview Quote" ng-click="previewQuote($event)" />
+				</div>
+			</div>
+		</div>
+		<div class="preview">
+			<ul>
+				<li>
+          <div class="line clearfix">
+            <div class="item-1">
+              <span class="title">Name:</span>
+              <span class="value">陈子文</span>
+            </div>
+            <div class="item-2">
+              <span class="title">EmaiL:</span>
+              <span class="value">jziwenchen@gmail.com</span>
+            </div>
+          </div>
+				</li>
+				<li>
+          <div class="line clearfix">
+            <div class="item-1">
+              <span class="title">Project Type:</span>
+              <span class="value">Web / Mobile Responsive Site</span>
+            </div>
+          </div>
+				</li>
+				<li>
+          <div class="line clearfix">
+            <div class="item-1">
+              <span class="title">Time Plan For Project:</span>
+              <span class="value">3 Month</span>
+            </div>
+          </div>
+				</li>
+				<li>
+          <div class="line clearfix">
+            <div class="item-1">
+              <span class="title">Project More Details</span>
+              <span class="value">项目说明:  社交类型项目， 丰富Facebook 圈</span>
+            </div>
+          </div>
+				</li>
+			</ul>
+		</div>
+		<div class="preview hideme">
+			<ul>
+				<li>
+					<h3>Your Name: {{quote.name}}</h3>
+				</li>
+				<li>
+					<h3>Email: {{quote.email}}</h3>
+				</li>
+				<li>
+					<h3>Project: {{quote.type}}</h3>
+				</li>
+				<li>
+					<h3>Month Plan: {{quote.month}}</h3>
+				</li>
+				<li>
+					<p>
+						{{quote.description}}
+					</p>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
+<div class="section-2">
+	<div class="wrapper">
+		<a href="#/quote">报价表单</a>
+		<a href="mailto:jziwenchen@gmail.com">联系我们</a>
+	</div>
+</div>
