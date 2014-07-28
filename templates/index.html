@@ -1,79 +1,132 @@
 <div class="header">
   <div class="wrapper clearfix">
-    <ul class="menu clearfix">
-      <li class="item"><a href="#/about">关于我们</a></li>
-      <li class="item"><a href="#/case">我们的案例</a></li>
-      <li class="item"><a href="#/tech">我们的服务</a></li>
-      <li class="item"><a href="#/contact">联系我们</a></li>
+    <ul class="menu clearfix" id="menu">
+      <li class="item active" menuanchor="about"><a href="javascript:void(0)">关于我们</a></li>
+      <li class="item" menuanchor="case"><a href="javascript:void(0)">我们的案例</a></li>
+      <li class="item" menuanchor="tech"><a href="javascript:void(0)">我们的服务</a></li>
+      <li class="item" menuanchor="contact"><a href="javascript:void(0)">联系我们</a></li>
     </ul>
   </div>
 </div>
 
-<!-- 关于我们 -->
-<div class="section section1">
-  <div class="wrapper">
-    <p class="p1">利用精湛的web 技术 为您与用户之间构造一条宽阔的大道</p>
-    <p class="p2">上海博思团队</p>
-  </div>
-</div>
-
-<!-- 关于我们结束 -->
-
-
-
-<!-- 我们的优势 -->
-<div class="section section2">
-  <div class="wrapper">
-    <div class="bg">
-      <div class="info">
-        <p>先进的Web 2.0技术, 包含无与伦比的CSS3技术，搭载多尺寸的mobile responsive设计理念, 让您的网站脱颖而出</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 我们的优势结束-->
-
-<!--我们的案例 -->
-<div class="section section3">
-  <div class="wrapper">
-      <div class="case-list clearfix">
-        <div class="item" ng-repeat="item in caseitems">
-            <div class="item-wrapper clearfix">
-                <img src="{{item.thumbnail}}" alt="" class="img" />
-                <div class="description">
-                  <div class="title">
-                    <h4>{{item.title}}</h4>
-                  </div>
-                  <div class="info"><p>{{item.info}}</p></div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-</div>
-<!-- 我们的案例 -->>
-
-<div class="section section4">
+<div id="fullpage" data-ng-element-ready="scrollFullpage()">
+  <!-- 关于我们 -->
+  <div class="section section1">
     <div class="wrapper">
-        <div class="top">
-            <h2>我们的服务</h2>
-            <div class="desc">
-                <p>我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 </p>
-            </div>
-        </div>
-        <div class="services-con">
-            <ul class="items" ng-repeat="item in services">
-                <li class="item clearfix">
-                    <div class="icon">
-                        <img src="{{item.thumbnail}}" alt="" />
-                    </div>
-                    <div class="info">
-                        <h3>{{item.title}}</h3>
-                        <div class="text">{{item.info}}</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <p class="p1">我们是一群活跃在上海的互联网创业团队，我们希望通过创意与实干的技术为您提供优质的互联网解决方案</p>
+      <p class="p2">我们有着丰富的技术积累，包括广告设计与创意,移动端应用, 网站, 爬虫, HTML5/CSS3, MySQL运帷, 网站维护...</p>
+      <p class="p3">我们尤其在网站设计，广告设计与创意方面有着丰富的实战经验,始终秉承"一个平台,Mobile App + PC 网站让您产品完美无瑕的展现</p>
+      <p class="p4">我们擅长在社交平台推广您的产品，我们擅长企业内部平台架构, 我们擅长网站设计与手机应用开发...</p>
+      <p class="p5">我们总是与时代为伍, 始终把最新技术与最具有时代化的创意作为优质服务的基础, 并且总是赢得客户称赞</p>
     </div>
+  </div>
+  <!-- 关于我们结束 -->
+
+
+  <!--我们的案例 -->
+  <div class="section section3">
+    <div class="wrapper">
+        <div class="case-list clearfix">
+          <div class="item" ng-repeat="item in caseitems">
+              <div class="item-wrapper clearfix">
+                  <img src="{{item.thumbnail}}" alt="" class="img" />
+                  <div class="description">
+                    <div class="title">
+                      <h4>{{item.title}}</h4>
+                    </div>
+                    <div class="info"><p>{{item.info}}</p></div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- 我们的案例 -->
+
+  <!-- 我们的服务 -->
+  <div class="section section4">
+      <div class="wrapper">
+          <div class="top">
+              <h2>我们的服务</h2>
+              <div class="desc">
+                  <p>我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 </p>
+              </div>
+              <div class="contact-us-btn">与我们取得联系</div>
+          </div>
+          <div class="services-con">
+              <ul class="items" ng-repeat="item in services">
+                  <li class="item clearfix">
+                      <div class="icon">
+                          <img src="{{item.thumbnail}}" alt="" />
+                      </div>
+                      <div class="info">
+                          <h3>{{item.title}}</h3>
+                          <div class="text">{{item.info}}</div>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+  <!-- 我们的服务结束-->
+
+
+  <!-- 取得联系 -->
+  <div class="section section2" >
+    <div class="wrapper">
+      <div class="bg">
+        <div class="info">
+          <p>先进的Web 2.0技术, 包含无与伦比的CSS3技术，搭载多尺寸的mobile responsive设计理念, 让您的网站脱颖而出</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 取得联系结束-->
+
 </div>
+
+<!-- Footer 开始 -->
+<div id="footer">
+  <div class="wrapper clearfix">
+    <div class="s1 s">
+      <h2>上海xx广告有限公司</h2>
+      <div class="desc">
+        上海xx广告有限公司简称上海新印象派，专注互联网并且为企业提供基于互联网平台的解决方案; 公司经营理念是礼仪，合作，互赢，开放. 
+      </div>
+      <div class="address">
+        <p>上海市 中山西路 2880号 企业广场301室</p>
+        <p>Tel: 15821121753</p>
+        <p>Email: jackey@newexpression.com</p>
+      </div>
+    </div>
+    <div class="s2 s">
+      <div class="tell">
+        <img src="" alt="">
+        <div class="desc">
+          <p>希望通过我们努力和创新, 让客户与众不同, 使客户在市场竞争中拥有无比的互联网优势...</p>
+          <p> - 新印象创始人 - <b>Jackey Chen</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="s3 s">
+      <ul class="social">
+        <li>
+          <a href="" class="weibo">Weibo</a>
+        </li>
+        <li>
+          <a href="" class="twitter">Twitter</a>
+        </li>
+        <li>
+          <a href="" class="Linkin">Linkin</a>
+        </li>
+      </ul>
+    </div>
+    <div class="copyright clearfix">
+        Copyright By NewExpression.com &copy; 2014. All Rights Reserved.
+    </div>
+    <div class="upper"><i class="fa fa-angle-double-up"></i></div>
+  </div>
+</div>
+<!---Footer 结束 -->
