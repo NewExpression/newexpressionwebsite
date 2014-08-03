@@ -512,6 +512,7 @@ span.ng-scope {
   background: #fff;
   opacity: 0.8;
   padding: 2em 2em;
+  position: relative;
 }
 
 .section4 .top h2 {
