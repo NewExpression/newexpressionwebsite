@@ -7,6 +7,8 @@ angular.module("BonsdevApp.controllers", ["BonesApp.Directives"])
 	.controller("IndexController", function ($scope) {
                 var $ = window.jQuery;
                 var menuanchor = ["about", "case", "tech", "contact"];
+                // Dragable section1
+                $(".section1 .wrapper > p").draggable();
                 $scope.init = function () {
                         $("body").delegate(".upper", "click",function () {
                                 var self = angular.element(this);
@@ -32,6 +34,7 @@ angular.module("BonsdevApp.controllers", ["BonesApp.Directives"])
                                 $.fn.fullpage.moveTo(i + 1, 0);
                         });
 
+
                 };
                 angular.element(document).scroll(function () {
                         var scrollTop = angular.element(document).scrollTop();
@@ -41,6 +44,16 @@ angular.module("BonsdevApp.controllers", ["BonesApp.Directives"])
                         else {
                                  angular.element("body .header").removeClass("menuactive");
                         }
+                });
+                
+                $scope.$on("onload", function () {
+                        var map = new BMap.Map("map");
+                        map.centerAndZoom(new BMap.Point(116.404269,39.916042), 12);
+                        var style = {
+                                features: ["road", "building", "water", "land", "poi"],
+                                style: "dark"
+                        };
+                        map.setMapStyle(style);
                 });
 
                 $scope.$on("onload", function () {
@@ -73,37 +86,26 @@ angular.module("BonsdevApp.controllers", ["BonesApp.Directives"])
 		$scope.caseitems = [{
                         thumbnail: "/misc/imgs/case1.png",
                         title: "芙美儿美鞋馆",
-                        keyword: ["阿里巴巴", "社交集成", "Magento", "微博", "电子商务平台"],
+                        keywords: ["阿里巴巴", "社交集成", "Magento", "微博", "电子商务平台"],
                         info: "芙美儿美鞋馆项目属于公司内部计划运营的电子商务平台,该平台以阿里巴巴为数据源,第三方平台包括微博, 微店, QQ空间等作为市场推广渠道, 利用自身技术优势，希望最终通过一个电子商务平台管理第三方平台营销数据和实现第三方平台的推广对接."
                 },{
-                        thumbnail: "/misc/imgs/case1.png",
-                        title: "Case Study one",
-                        info: "Case Infomration"
-                },{
-                        thumbnail: "/misc/imgs/case1.png",
-                        title: "Case Study one",
-                        info: "Case Infomration"
-                },{
-                        thumbnail: "/misc/imgs/case1.png",
-                        title: "Case Study one",
-                        info: "Case Infomration"
+                        thumbnail: "/misc/imgs/case2.png",
+                        title: "男神女神 投票吧",
+                        info: "男神女神投票吧 是一款新浪社交小应用,它通过爬虫程序从百度抓取明星排名榜和图片,最后把明星数据和图片存储在应用系统内部, 最后通过第三方API实现了微博用户投票,投票排名的功能.",
+                        keywords: ["爬虫", "微博", "社交应用"]
                 }];
             
                 $scope.services = [{
-                        thumbnail: "/misc/imgs/desktop.png",
-                        info: "网站设计 和网站开发",
-                        title: "网站设计和网站开发"
+                        thumbnail: "/misc/imgs/service1.png",
+                        title: "网站创意设计和开发",
+                        info: "网站创意带给用户以遐想, 设计带给用户便捷, 网站的架构和实现为客户的设想和市场计划提供强大的动力. 我们在网站方面积累了大量的经验, 包括Mobile App 设计和开发, 响应式网站设计和开发. 如果您有任何关于网站的需求和疑问, 可以向我们免费询问."
                 },{
-                        thumbnail: "/misc/imgs/desktop.png",
-                        info: "网站设计 和网站开发",
-                        title: "网站设计和网站开发"
+                        thumbnail: "/misc/imgs/service2.png",
+                        title: "手机移动端开发",
+                        info: "手机移动端作为最具有潮流和最具有改变现在互联网格局的平台, 我们为客户精心提供了定制各类手机应用的开发服务, 请告诉我们您的诉求, 我们将竭力服务让移动应用搭载您的产品启航在未来智能手机大海中."
                 },{
-                        thumbnail: "/misc/imgs/desktop.png",
-                        info: "网站设计 和网站开发",
-                        title: "网站设计和网站开发"
-                },{
-                        thumbnail: "/misc/imgs/desktop.png",
-                        info: "网站设计 和网站开发",
-                        title: "网站设计和网站开发"
+                        thumbnail: "/misc/imgs/service3.png",
+                        title: "品牌推广和社交营销",
+                        info: "近几年社交平台呈现百花齐放的姿态包括微博,腾讯微博,开心网,人人社交,微信等等, 公司因此为客户提供社交平台集成服务, 通过集成把您的产品推广到各个平台去,利用粉丝营销的技术提高用户黏度, 扩大市场和提高产品口碑."
                 }];
 	});

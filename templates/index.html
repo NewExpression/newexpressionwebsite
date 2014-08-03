@@ -6,6 +6,7 @@
       <li class="item" menuanchor="tech"><a href="javascript:void(0)">我们的服务</a></li>
       <li class="item" menuanchor="contact"><a href="javascript:void(0)">联系我们</a></li>
     </ul>
+    <div class="logo"><img src="/logo.png" alt=""></div>
   </div>
 </div>
 
@@ -47,15 +48,15 @@
   <div class="section section4">
       <div class="wrapper">
           <div class="top">
-              <h2>我们的服务</h2>
+              <h2>公司服务</h2>
               <div class="desc">
-                  <p>我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 我们的服务 </p>
+                  <p>公司秉承客户为导向的服务理念,每个案例都会认真仔细的雕琢, 给客户提供最到优质的产品服务. </p>
               </div>
               <div class="contact-us-btn">与我们取得联系</div>
           </div>
           <div class="services-con">
-              <ul class="items" ng-repeat="item in services">
-                  <li class="item clearfix">
+              <ul class="items" >
+                  <li class="item clearfix" ng-repeat="item in services">
                       <div class="icon">
                           <img src="{{item.thumbnail}}" alt="" />
                       </div>
@@ -75,9 +76,16 @@
   <!-- 取得联系 -->
   <div class="section section2" >
     <div class="wrapper">
-      <div class="bg">
-        <div class="info">
-          <p>先进的Web 2.0技术, 包含无与伦比的CSS3技术，搭载多尺寸的mobile responsive设计理念, 让您的网站脱颖而出</p>
+      <div id="map"></div>
+      <div id="info">
+        <h2>上海xx广告有限公司</h2>
+        <div class="desc">
+          上海xx广告有限公司简称上海新印象派，专注互联网并且为企业提供基于互联网平台的解决方案; 公司经营理念是礼仪，合作，互赢，开放. 
+        </div>
+        <div class="address">
+          <p>上海市 中山西路 2880号 企业广场301室</p>
+          <p>Tel: 15821121753</p>
+          <p>Email: jackey@newexpression.com</p>
         </div>
       </div>
     </div>
