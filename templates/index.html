@@ -14,11 +14,12 @@
   <!-- 关于我们 -->
   <div class="section section1">
     <div class="wrapper">
-      <p class="p1">我们是一群活跃在上海的互联网创业团队，我们希望通过创意与实干的技术为您提供优质的互联网解决方案</p>
-      <p class="p2">我们有着丰富的技术积累，包括广告设计与创意,移动端应用, 网站, 爬虫, HTML5/CSS3, MySQL运帷, 网站维护...</p>
+      <p class="p1">新印象网络有限公司是一家非常年轻的互联网公司, 成立于2014年, 专业从事互联网产品研发和解决方案.</p>
+      <p class="p2">公司团队技术雄厚,   团队成员都是由从事互联网多年的精英组成, 对互联网各个技术领域都有丰富的经验, 并且帮助公司内部研发的各种产品来帮助客户快速和专业的解决业务难题.</p>
       <p class="p3">我们尤其在网站设计，广告设计与创意方面有着丰富的实战经验,始终秉承"一个平台,Mobile App + PC 网站让您产品完美无瑕的展现</p>
-      <p class="p4">我们擅长在社交平台推广您的产品，我们擅长企业内部平台架构, 我们擅长网站设计与手机应用开发...</p>
-      <p class="p5">我们总是与时代为伍, 始终把最新技术与最具有时代化的创意作为优质服务的基础, 并且总是赢得客户称赞</p>
+      <p class="p4">团队重视产品研发，始终把技术掌握在自己手中. 公司产品包括Fly CMS 内容管理系统（中文名是福来CMS ），专门针对中小企业提供网站解决方案, 并且更多产品还在研发中，包括Boy Spider爬虫程序等
+  </p>
+      <p class="p5">新印象非常重视团队的建设和个人发展，礼仪，分享，进取，创意是团队精神核心. 我们总是与时代为伍, 始终把最新技术与最具有时代化的创意作为优质服务的基础, 并且总是赢得客户称赞</p>
     </div>
   </div>
   <!-- 关于我们结束 -->
@@ -55,15 +56,17 @@
               <div class="contact-us-btn">与我们取得联系</div>
           </div>
           <div class="services-con">
-              <ul class="items" >
+              <ul class="items clearfix" >
                   <li class="item clearfix" ng-repeat="item in services">
-                      <div class="icon">
-                          <img src="{{item.thumbnail}}" alt="" />
-                      </div>
-                      <div class="info">
-                          <h3>{{item.title}}</h3>
-                          <div class="text">{{item.info}}</div>
-                      </div>
+                        <div class="icon">
+                            <img src="{{item.thumbnail}}" alt="" />
+                        </div>
+                        <div class="info">
+                            <h3>{{item.title}}</h3>
+                            <div class="text">{{item.info}}</div>
+                            <div class="value">{{item.value}}</div>
+                            <div class="tech-keyword"><span class="label">技术关键字</span>&nbsp;{{item.techKeyword}}</div>
+                        </div>
                   </li>
               </ul>
           </div>
@@ -132,7 +135,7 @@
       </ul>
     </div>
     <div class="copyright clearfix">
-        Copyright By NewExpression.com &copy; 2014. All Rights Reserved.
+        Copyright By NewExpression.com &copy; 2014. All Rights Reserved. <a href="http://m.kuaidi100.com">快递查询</a>
     </div>
     <div class="upper"><i class="fa fa-angle-double-up"></i></div>
   </div>
